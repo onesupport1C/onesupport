@@ -188,6 +188,24 @@ body {
   color: var(--accent); font-weight: 800;
 }
 
+/* ===== Карточки лицензий (широкие, по 2 в ряд) ===== */
+.cards--wide { grid-template-columns: repeat(2, 1fr); }
+
+.card--license {
+  display: flex; flex-direction: column;
+  background: linear-gradient(160deg, rgba(139,92,246,0.10), rgba(59,130,246,0.04));
+  border-color: rgba(139, 92, 246, 0.25);
+}
+.card--license .card__list { margin-bottom: auto; }
+.card__link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 20px; padding-top: 16px;
+  color: var(--accent); font-weight: 600; text-decoration: none;
+  border-top: 1px solid var(--border);
+  transition: color .2s, gap .2s;
+}
+.card__link:hover { color: var(--accent-3); gap: 12px; }
+
 /* ===== Почему я ===== */
 .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .why {
@@ -259,6 +277,7 @@ body {
 @media (max-width: 900px) {
   .hero__stats { grid-template-columns: 1fr; max-width: 420px; }
   .cards { grid-template-columns: 1fr; }
+  .cards--wide { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .cases { grid-template-columns: repeat(2, 1fr); }
   .contact { grid-template-columns: 1fr; gap: 36px; }

@@ -67,15 +67,16 @@ form.addEventListener('submit', async (e) => {
   try {
     const response = await fetch(form.action, {
       method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
+      body: new FormData(form)
     });
 
-    if (response.ok) {
+    const result = await response.json();
+
+    if (result.ok) {
       note.textContent = 'Спасибо! Заявка отправлена. Свяжусь с вами в течение дня.';
       form.reset();
     } else {
-      throw new Error('Не удалось отправить');
+      throw new Error(result.message || 'Не удалось отправить');
     }
   } catch (err) {
     note.style.color = 'var(--accent-3)';
