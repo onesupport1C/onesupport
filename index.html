@@ -217,16 +217,15 @@
           Бесплатная оценка. Отвечаю в течение дня. Без воды — по делу и с конкретикой.
         </p>
         <div class="contact__chips">
-          <a href="https://t.me/ВАШ_ТЕЛЕГРАМ" class="chip" target="_blank" rel="noopener">
-            <span class="chip__icon">✈️</span> Telegram
-          </a>
           <a href="mailto:onesupport@ssuh.ru" class="chip">
             <span class="chip__icon">✉️</span> onesupport@ssuh.ru
           </a>
         </div>
       </div>
 
-      <form class="form" id="contactForm" novalidate>
+      <form class="form" id="contactForm"
+            action="https://formspree.io/f/xjgngzrb"
+            method="POST" novalidate>
         <div class="form__row">
           <label for="name">Как вас зовут</label>
           <input type="text" id="name" name="name" placeholder="Иван" required />

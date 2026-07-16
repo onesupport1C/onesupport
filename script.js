@@ -46,7 +46,7 @@ revealTargets.forEach(el => observer.observe(el));
 const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name = form.name.value.trim();
@@ -58,9 +58,30 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Отправляю…';
   note.style.color = 'var(--accent)';
-  note.textContent = 'Спасибо! Заявка отправлена. Свяжусь с вами в течение дня.';
+  note.textContent = '';
 
-  // TODO: заменить на реальную отправку (fetch на бота / сервис форм)
-  form.reset();
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      note.textContent = 'Спасибо! Заявка отправлена. Свяжусь с вами в течение дня.';
+      form.reset();
+    } else {
+      throw new Error('Не удалось отправить');
+    }
+  } catch (err) {
+    note.style.color = 'var(--accent-3)';
+    note.textContent = 'Не удалось отправить. Напишите на onesupport@ssuh.ru, пожалуйста.';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Отправить заявку →';
+  }
 });
