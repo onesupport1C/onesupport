@@ -61,12 +61,12 @@ body {
   border-bottom: 1px solid var(--border);
 }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; }
-.logo__mark {
-  display: inline-grid; place-items: center;
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff; font-size: 14px;
+.logo__img {
+  width: 40px; height: 40px; border-radius: 10px;
+  object-fit: contain; display: block;
+  transition: transform .2s;
 }
+.logo:hover .logo__img { transform: scale(1.08) rotate(-3deg); }
 .logo__text { font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.5px; }
 
 .nav__links { display: flex; align-items: center; gap: 28px; list-style: none; }
