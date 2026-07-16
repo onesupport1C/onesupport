@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>onesupport — 1С-интеграции и автоматизация учёта</title>
+  <meta name="description" content="Интеграции 1С с маркетплейсами и CRM, дашборды для собственника, аудит учёта. Превращаю 1С из головной боли в инструмент прибыли." />
+
+  <!-- Open Graph — красиво, когда кидаешь ссылку в чат -->
+  <meta property="og:title" content="1С, которая работает на вас" />
+  <meta property="og:description" content="Интеграции, дашборды, аудит учёта. Бухгалтерия работает сама — вы видите результат." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Декоративный градиентный фон -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+  </div>
+
+  <!-- НАВИГАЦИЯ -->
+  <nav class="nav">
+    <a href="#top" class="logo">
+      <span class="logo__mark">1</span>
+      <span class="logo__text">onesupport</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#why">Почему я</a></li>
+      <li><a href="#cases">Результаты</a></li>
+      <li><a href="#contacts" class="btn btn--ghost">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="container hero__inner">
+      <span class="hero__badge">Программист 1С · C# · бухучёт</span>
+      <h1 class="hero__title">
+        Превращаю 1С из головной боли
+        <span class="grad-text">в инструмент прибыли</span>
+      </h1>
+      <p class="hero__subtitle">
+        Интеграции с маркетплейсами и CRM, дашборды для собственника, аудит учёта.
+        Бухгалтерия работает сама — вы видите результат.
+      </p>
+      <div class="hero__cta">
+        <a href="#contacts" class="btn btn--primary">Обсудить проект →</a>
+        <a href="#services" class="btn btn--ghost">Смотреть услуги</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num">с 3 дней</span>
+          <span class="stat__label">до 2 часов — закрытие месяца</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">×3</span>
+          <span class="stat__label">скорость обработки заказов</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">0</span>
+          <span class="stat__label">ручного ввода после интеграции</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- УСЛУГИ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Что делаю</span>
+        <h2 class="section__title">Услуги, которые <span class="grad-text">окупаются</span></h2>
+        <p class="section__lead">Не «часы работы», а конкретный результат и сэкономленные деньги.</p>
+      </div>
+
+      <div class="cards">
+        <!-- Карточка 1 -->
+        <article class="card">
+          <div class="card__icon">🛒</div>
+          <h3 class="card__title">1С ↔ Маркетплейсы</h3>
+          <p class="card__text">
+            Wildberries, Ozon. Автозагрузка заказов, обновление остатков и цен,
+            формирование закрывающих документов без ручного ввода.
+          </p>
+          <ul class="card__list">
+            <li>Заказы в 1С за минуты</li>
+            <li>Остатки всегда актуальны</li>
+            <li>Документы — автоматически</li>
+          </ul>
+        </article>
+
+        <!-- Карточка 2 -->
+        <article class="card">
+          <div class="card__icon">🔗</div>
+          <h3 class="card__title">1С ↔ CRM / Сайт / Telegram</h3>
+          <p class="card__text">
+            Заказы и оплаты без двойного ввода. Уведомления о сделках и платежах
+            сразу в мессенджер — собственник всегда в курсе.
+          </p>
+          <ul class="card__list">
+            <li>Битрикс24, amoCRM, свой сайт</li>
+            <li>Уведомления в Telegram</li>
+            <li>Связка оплат с заказами</li>
+          </ul>
+        </article>
+
+        <!-- Карточка 3 -->
+        <article class="card card--accent">
+          <div class="card__icon">📊</div>
+          <h3 class="card__title">Дашборды для собственника</h3>
+          <p class="card__text">
+            Деньги, остатки, рентабельность по товарам и менеджерам — в одном экране.
+            Видно бизнес в реальном времени, а не «по выгрузке раз в месяц».
+          </p>
+          <ul class="card__list">
+            <li>Кассовые разрывы — заранее</li>
+            <li>Маржинальность по позициям</li>
+            <li>Доступ с телефона</li>
+          </ul>
+        </article>
+
+        <!-- Карточка 4 -->
+        <article class="card">
+          <div class="card__icon">🔍</div>
+          <h3 class="card__title">Аудит учёта и поиск потерь</h3>
+          <p class="card__text">
+            Нахожу, где вы теряете деньги: задвоения, ошибки в себестоимости,
+            невыставленные счета, переплаты налогов. С конкретными цифрами.
+          </p>
+          <ul class="card__list">
+            <li>Отчёт «где дыры»</li>
+            <li>План исправления</li>
+            <li>Внедрение под ключ</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПОЧЕМУ Я -->
+  <section class="section section--alt" id="why">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Почему я</span>
+        <h2 class="section__title">Редкая <span class="grad-text">комбинация</span></h2>
+        <p class="section__lead">Большинство умеет что-то одно. Я соединяю три мира в один результат.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why">
+          <span class="why__num">01</span>
+          <h3>Программирование</h3>
+          <p>1С и C#. Пишу интеграции, обработчики, внешние сервисы — а не только типовые доработки.</p>
+        </div>
+        <div class="why">
+          <span class="why__num">02</span>
+          <h3>Бухучёт</h3>
+          <p>Понимаю не только «как написать код», но и «что это значит в учёте и налогах».</p>
+        </div>
+        <div class="why">
+          <span class="why__num">03</span>
+          <h3>Продажи и бизнес</h3>
+          <p>Знаю, как устроены процессы и где automation реально экономит деньги, а не создаёт видимость.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- РЕЗУЛЬТАТЫ -->
+  <section class="section" id="cases">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Результаты</span>
+        <h2 class="section__title">Не часы — <span class="grad-text">эффект</span></h2>
+        <p class="section__lead">Примеры того, что остаётся после внедрения. Подставь свои цифры.</p>
+      </div>
+
+      <div class="cases">
+        <div class="case">
+          <span class="case__num">−95%</span>
+          <span class="case__label">времени на закрытие месяца</span>
+        </div>
+        <div class="case">
+          <span class="case__num">0 ₽</span>
+          <span class="case__label">ручного ввода заказов маркетплейса</span>
+        </div>
+        <div class="case">
+          <span class="case__num">+800 тыс ₽</span>
+          <span class="case__label">найденных потерь за один аудит</span>
+        </div>
+        <div class="case">
+          <span class="case__num">24/7</span>
+          <span class="case__label">дашборд собственника под рукой</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="section section--cta" id="contacts">
+    <div class="container contact">
+      <div class="contact__text">
+        <span class="section__tag">Контакты</span>
+        <h2 class="section__title">Расскажите задачу — <span class="grad-text">предложу решение</span></h2>
+        <p class="section__lead">
+          Бесплатная оценка. Отвечаю в течение дня. Без воды — по делу и с конкретикой.
+        </p>
+        <div class="contact__chips">
+          <a href="https://t.me/ВАШ_ТЕЛЕГРАМ" class="chip" target="_blank" rel="noopener">
+            <span class="chip__icon">✈️</span> Telegram
+          </a>
+          <a href="mailto:you@example.com" class="chip">
+            <span class="chip__icon">✉️</span> you@example.com
+          </a>
+          <a href="tel:+79000000000" class="chip">
+            <span class="chip__icon">📞</span> +7 900 000-00-00
+          </a>
+        </div>
+      </div>
+
+      <form class="form" id="contactForm" novalidate>
+        <div class="form__row">
+          <label for="name">Как вас зовут</label>
+          <input type="text" id="name" name="name" placeholder="Иван" required />
+        </div>
+        <div class="form__row">
+          <label for="contact">Telegram или телефон</label>
+          <input type="text" id="contact" name="contact" placeholder="@username или +7…" required />
+        </div>
+        <div class="form__row">
+          <label for="task">Что нужно сделать</label>
+          <textarea id="task" name="task" rows="4" placeholder="Опишите задачу в двух словах — этого хватит для старта"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Отправить заявку →</button>
+        <p class="form__note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> onesupport — 1С-интеграции и автоматизация учёта</span>
+      <span class="footer__muted">Сделано с фокусом на результат, а не на часы</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

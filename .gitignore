@@ -1,0 +1,16 @@
+# Рабочие файлы 1С и прочее — НЕ публикуем на сайте
+*.bsl
+*.epf
+*.erf
+*.dt
+*.cf
+ОСВ62ПоДням/
+README_Сборка.md
+sync-openapi.json
+
+# Системное
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/
+.idea/
